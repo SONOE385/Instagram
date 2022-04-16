@@ -1,0 +1,33 @@
+/******ヘッダー*****/
+.header{
+    width:65%;
+    align-items:center;
+    margin:auto;
+}
+
+.icon{
+    text-align: right;
+}
+
+
+/*****画像の表示****/
+.image-list{
+    width:68%;
+    align-items:center;
+    margin:auto;
+}
+
+.img-wrap{    
+    margin:10px;
+    justify-content:space-around;
+    width:auto;
+    height:auto;
+    flex-wrap: wrap;
+}
+
+.img-wrap img{
+    width:250px;
+    height:250px;
+    object-fit: cover;
+    margin:5px;
+}
