@@ -1,17 +1,14 @@
 @extends('layouts.app')
 
-<head>
-@include('layouts.header')
-<hr />
-</header>
-
-<div class="image-list">
-    <div class="img-wrap">
-        @foreach($images as $image)
-            <img src="{{ Storage::url($image->file_path) }}">
-            {{--<p>{{ $image->file_name }}</p>--}}
-        @endforeach     
+@section('content')
+    <div class="image-list">
+        <div class="img-wrap">
+            @foreach($images as $image)
+            <a href="/list/{{ $image->id }}"><img src="{{ Storage::url($image->file_path) }}"></a>
+            @endforeach     
+            <div class="pagenate">
+                {{ $images->links() }}
+            </div>
+        </div>
     </div>
-
-   
-</div>
+@endsection

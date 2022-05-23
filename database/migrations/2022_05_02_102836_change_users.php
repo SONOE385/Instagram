@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('likes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            //パスワードの文字数を変更
+            $table->string('password',255)->nullable()->change();
+            $table->string('nickname',15);
         });
     }
 
@@ -26,6 +27,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('likes');
+        Schema::table('users', function (Blueprint $table) {
+            //
+            $table->string('password',15)->nullable()->change();
+        });
     }
 };

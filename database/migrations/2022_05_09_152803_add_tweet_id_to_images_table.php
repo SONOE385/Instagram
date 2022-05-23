@@ -14,9 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('images', function (Blueprint $table) {
-            //追加カラム
-            $table->string("file_name");
-            $table->string("file_path");
+            //
+            $table->integer('tweet_id')->length(8)->default(0);
         });
     }
 

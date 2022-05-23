@@ -1,18 +1,49 @@
 /******ヘッダー*****/
 .header{
     width:65%;
-    align-items:center;
     margin:auto;
+    margin-top: 20px;
+}
+
+.header-container a img:hover{
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+}
+
+.icon-area{
+    width: 30%;
+    display: flex;
+    text-align: right;
+
 }
 
 .icon{
-    text-align: right;
+    position: relative;
 }
 
+.icon-area a{
+    width: 90%;
+    
+}
+
+.icon-area input{
+    border: none;
+    background-color: none;
+    text-align: right;
+
+}
+
+.container{
+    text-align: center;
+}
+
+.header-container{
+    width:100%;
+}
 
 /*****画像の表示****/
 .image-list{
-    width:68%;
+    width:80%;
     align-items:center;
     margin:auto;
 }
@@ -30,4 +61,137 @@
     height:250px;
     object-fit: cover;
     margin:5px;
+}
+
+.img-wrap img:hover{
+    transform: scale(1.03);
+    transition-duration: 0.2s;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+    -ms-filter: “alpha( opacity=50 )”;
+}
+
+.pagenate{
+    text-align: center;
+}
+
+.pagenation ul li{
+    margin: 0 auto;
+}
+
+
+/*****画像の表示****/
+.post-form{
+    width:50%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.post-form button{
+    background-color:#202623;
+    color:aliceblue;
+}
+
+.form-group{
+    width:100%;
+    background-color: white;
+    margin: 30px 0 30px 0;
+}
+
+/*****画像の詳細表示****/
+.img-wrap-view{
+    margin:10px;
+    text-align: center;
+    width:auto;
+    height:auto;
+    flex-wrap: wrap;
+}
+
+.img-wrap-view img{
+    width:400px;
+    height:400px;
+    object-fit: cover;
+    margin:5px;
+}
+
+/*****ログイン画面****/
+.main-container{
+    width:100%;
+}
+
+.user-infomation-contents{
+    width:40%;
+    margin: 0 auto;
+}
+
+.user-infomation-title{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+/*****ポップアップ****/
+.tooltipIcon{
+    position: relative;
+}
+
+#toolTip-menu{
+    display: none;
+    position: absolute;
+    content: '';
+	top: 10px;
+	left: 50%;
+}
+.icon:hover #toolTip-menu{
+
+
+
+    /* display: block;
+    visibility: visible;  */
+}
+
+#tooltipIcon { /* アイコンのスタイル */
+    position: relative;
+    cursor: pointer;
+    color: #4682b4;
+}
+
+/***画像投稿の選択エリア**/
+
+.file-area{
+    padding: 5px 5px;
+    width: 220px;
+}
+
+.filelabel{
+    display: inline-block;
+    position: relative;
+    border:1px solid #1877F2;
+    background-color:#fff;
+    color: #1877F2;
+    font-size: 12px;
+    padding: 3px 5px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.filelabel:hover{
+    background-color: #004db1;
+    color:#fff
+}
+
+.js-img{
+    display: none;
+}
+
+button{
+    display: inline-block;
+    position: relative;
+    background-color: #343635;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
 }

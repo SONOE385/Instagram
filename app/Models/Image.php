@@ -10,5 +10,5 @@ class Image extends Model
     use HasFactory;
 
     protected $table = "images";//imagesテーブルと連携するため
-    protected $fillable = ["file_name","file_path","file_size"];//テーブル保存を楽にするため
+    protected $fillable = ["file_name","file_path","file_size","tweet_id"];//テーブル保存を楽にするため
 }
