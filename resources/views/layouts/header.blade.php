@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-4">
                 @if(session("simple_auth"))
-                    <a href="{{ route('upload_form') }}">
+                    <a href="{{ route('upload_form') }}" class="camera">
                         <img src="/images/camera.png" width="13%"/>
                     </a>
                 @endif
@@ -27,7 +27,7 @@
                         <div id="toolTip-menu">
                             <form method="post" action="{{ url('logout') }}">
                                 @csrf 
-                                <input type="submit" class="user-infomation-button" value="logout" />
+                                <input type="submit" class="user-infomation-button" value="{{ $user_name }}さん" />
                             </form>
                         </div>
                     </div>

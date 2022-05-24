@@ -6,7 +6,7 @@
             @foreach($images as $image)
             <a href="/list/{{ $image->id }}"><img src="{{ Storage::url($image->file_path) }}"></a>
             @endforeach     
-            <div class="pagenate">
+            <div class="d-flex justify-content-center">
                 {{ $images->links() }}
             </div>
         </div>

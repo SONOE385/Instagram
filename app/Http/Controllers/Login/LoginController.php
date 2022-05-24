@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Login;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Http\Middleware\Auth;
+// use App\Http\Middleware\Auth;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\LoginRequest;
 
 
@@ -41,12 +42,17 @@ class LoginController extends Controller
             
             // セッション
             session(['id'  => $user[0]->id]);
+            session(['name'  => $user[0]->name]);
             
             // フラッシュ
             session()->put("simple_auth", true);
 
+
+            // $name = $request->name;
+
             return redirect(url('/list'));
-        // 不一致    
+
+        // 不一致 
         }else{
             session()->flash('flash_msg', '名前またはパスワードが間違っています。');
             return view('login.login');

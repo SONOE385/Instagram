@@ -7,7 +7,7 @@ use App\Models\Image;
 use App\Models\Tweet;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Pagination\Paginator;
-
+use Carbon\Carbon;
 
 class ImageListController extends Controller
 {
@@ -31,6 +31,7 @@ class ImageListController extends Controller
         $auth = Auth::user();
         $auth_id = Auth::id();
 
+
         // ユーザーごとの投稿を表示
         $sort = $request->sort;
         $image = Image::orderBy('id','desc')->paginate(9);
@@ -50,11 +51,14 @@ class ImageListController extends Controller
         }
 
         $tweet = Tweet::find($image->tweet_id);
+        $date = Carbon::createFromFormat('Y-m-d H:i:s', $image->created_at)->format('Y/m/d H:i');
+
 
         return view('image_view',
         [
             'image' => $image,
-            'tweet' => $tweet
+            'tweet' => $tweet,
+            'date' => $date,
         ]);
     }
 
