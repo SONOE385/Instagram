@@ -13,32 +13,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//ログイン画面
-Route::get('/',[App\Http\Controllers\Login\LoginController::class, "showlogin"])->name("showlogin");
+    //ログイン画面
+    Route::get('/',[App\Http\Controllers\Login\LoginController::class, "showlogin"])->name("showlogin");
 
-//ログインメソッド
-Route::post('/login',[App\Http\Controllers\Login\LoginController::class, "login"])->name("login");
+    //ログインメソッド
+    Route::post('/login',[App\Http\Controllers\Login\LoginController::class, "login"])->name("login");
 
-//ログアウトメソッド
-Route::post('/logout',[App\Http\Controllers\Login\LoginController::class, "logout"])->name("logout");
+    //会員登録画面
+    Route::get('/register',[App\Http\Controllers\Login\RegisterController::class, "register"])->name("register");
 
-//会員登録画面
-Route::get('/register',[App\Http\Controllers\Login\RegisterController::class, "register"])->name("register");
+    //会員登録メソッド
+    Route::post('/register-user',[App\Http\Controllers\Login\RegisterController::class, "registerUser"])->name("register-user");
 
-//会員登録メソッド
-Route::post('/register-user',[App\Http\Controllers\Login\RegisterController::class, "registerUser"])->name("register-user");
-
-
-
-
-//画像投稿ページ
-Route::get('/form',[App\Http\Controllers\UploadImageController::class, "show"])->name("upload_form");
-
-//画像投稿ルート
-Route::post('/upload',[App\Http\Controllers\UploadImageController::class, "upload"])->name("upload_image");
 
 //投稿一覧
-Route::get('/list',[App\Http\Controllers\ImageListController::class, "show"])->name("image_list");
+// Route::get('/list',[App\Http\Controllers\ImageListController::class, "show"])->name("image_list");
 
-//投稿詳細
-Route::get('/list/{id}',[App\Http\Controllers\ImageListController::class, "view"])->name("image_view");
+
+Route::middleware('simple_auth')->group(function(){
+    //投稿一覧画面(ミドルウェアつき)
+    Route::get('/list', [App\Http\Controllers\ImageListController::class, "show"])->name("image_list");
+    
+    //ログアウトメソッド
+    Route::post('/logout',[App\Http\Controllers\Login\LoginController::class, "logout"])->name("logout");
+
+    //画像投稿ページ
+    Route::get('/form',[App\Http\Controllers\UploadImageController::class, "show"])->name("upload_form");
+
+    //画像投稿ルート
+    Route::post('/upload',[App\Http\Controllers\UploadImageController::class, "upload"])->name("upload_image");
+
+    //投稿詳細
+    Route::get('/list/{id}',[App\Http\Controllers\ImageListController::class, "view"])->name("image_view");
+});
+

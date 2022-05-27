@@ -7,8 +7,9 @@
         </div>
         <div class="tweet-body">
             <div class="cereated-at">
-                {{ $date }}
+                投稿日：{{ $date }}
             </div>
+            <hr class="cp_hr04" />
             <p>{{ $tweet->tweet }}</p>
         </div>
     </div>

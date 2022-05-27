@@ -47,6 +47,9 @@
                 </form>
             </div>
         </div>
+        <div class="register">
+            <div class="registerurl">会員でない方はこちら&emsp;<a href="{{ url('/register') }}">新規会員登録</a></div>
+        </div>
     </div>
 </div>
 @endsection

@@ -85,7 +85,7 @@ body {
 }
 
 hr {
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   color: inherit;
   background-color: currentColor;
   border: 0;

@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Login;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-// use App\Http\Middleware\Auth;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\LoginRequest;
+use App\Http\Middleware\SimpleAuth;
 
 
 
@@ -19,9 +19,14 @@ class LoginController extends Controller
      */
     public function showlogin()
     {
-        return view('login.login');
+        //ログインしていたら、url手打ちでもログイン画面出せないようにする
+        if(session('simple_auth')){
+            return redirect('/list');
+        }else{
+            //未ログインなら、ログイン画面を出す
+            return view('login.login');
+        }
     }
-    
     
     /**
      * ログイン処理
@@ -46,9 +51,6 @@ class LoginController extends Controller
             
             // フラッシュ
             session()->put("simple_auth", true);
-
-
-            // $name = $request->name;
 
             return redirect(url('/list'));
 

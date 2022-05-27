@@ -19,18 +19,15 @@
 
             <div class="icon-area col-sm-4">
                 @if(session("simple_auth"))
-
-                    <div id="tooltipIcon" class="icon">
-                        <a  href="{{ route('image_list') }}">
-                            <img src="/images/icon.jpg" width="25%" style="border-radius: 50%;" />
-                        </a>
-                        <div id="toolTip-menu">
-                            <form method="post" action="{{ url('logout') }}">
-                                @csrf 
-                                <input type="submit" class="user-infomation-button" value="{{ $user_name }}さん" />
-                            </form>
-                        </div>
-                    </div>
+                <div class="user-area">
+                    <form method="post" action="{{ url('logout') }}">
+                        @csrf 
+                        <input type="submit" class="user-infomation-button" value="{{ $user_name }}さん" />
+                    </form>
+                    <a  href="{{ route('image_list') }}">
+                        <img src="/images/icon.jpg" width="25%" style="border-radius: 50%;" />
+                    </a>
+                </div>
                 @endif
             </div>
         </div>

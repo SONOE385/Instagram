@@ -21,9 +21,35 @@
 }
 
 .icon-area a{
-    width: 90%;
-    
+    width: 90%; 
 }
+
+/*****ポップアップ****/
+.tooltipIcon{
+    position: relative;
+}
+
+#toolTip-menu{
+    display: none;
+    position: absolute;
+    content: '';
+	top: 10px;
+	left: 50%;
+}
+.icon:hover #toolTip-menu{
+
+
+
+    /* display: block;
+    visibility: visible;  */
+}
+
+#tooltipIcon { /* アイコンのスタイル */
+    position: relative;
+    cursor: pointer;
+    color: #4682b4;
+}
+
 
 .icon-area input{
     border: none;
@@ -43,6 +69,22 @@
 .header-container{
     width:100%;
 }
+
+.user-area{
+    width: 50%;
+    display: flex;
+    margin: 0 0 0 auto;
+}
+
+.user-area a img{
+    width: 50px;
+}
+
+.user-area input{
+    margin: 10px 20px 0 0;
+    font-size: 16px;
+}
+
 
 /*****画像の表示****/
 .image-list{
@@ -96,6 +138,7 @@
     width:60%;
     align-items:center;
     margin:0 auto;
+    background-color: #fff;
 }
 
 .img-wrap-view{
@@ -130,7 +173,12 @@
 
 .cereated-at{
     text-align: right;
-    margin-bottom: 20px;
+}
+
+.cp_hr04 {
+	border-width: 3px 0 0 0;
+	border-style: double;
+	border-color: #ff6f00;
 }
 
 /*****ログイン画面****/
@@ -148,32 +196,15 @@
     margin-bottom: 20px;
 }
 
-
-/*****ポップアップ****/
-.tooltipIcon{
-    position: relative;
+ .register a{
+   font-size: 14px;
 }
 
-#toolTip-menu{
-    display: none;
-    position: absolute;
-    content: '';
-	top: 10px;
-	left: 50%;
-}
-.icon:hover #toolTip-menu{
-
-
-
-    /* display: block;
-    visibility: visible;  */
+.registerurl{
+    margin-top: 50px;
+    font-size:12px;
 }
 
-#tooltipIcon { /* アイコンのスタイル */
-    position: relative;
-    cursor: pointer;
-    color: #4682b4;
-}
 
 /***画像投稿の選択エリア**/
 
