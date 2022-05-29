@@ -11,6 +11,9 @@ class UserNameComposer
     //ビューで{{$user_name}}とした箇所にセッションのidからnameをfindして表示させる
     public function compose(View $view)
     {
-        $view->with('user_name', User::find(session("id"))->name);
+
+
+        $view->with('user_name',User::find(session("id"))->name);
+
     }
 }

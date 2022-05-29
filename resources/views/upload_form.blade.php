@@ -15,7 +15,7 @@
 	<form method="post" action="{{ route('upload_image') }}" enctype="multipart/form-data">
 		@csrf
 		<div class="flex-body" width="100%"; text-align="center";>
-			<div id="parent-file-area" style="display:flex; width:200px;">
+			<div id="parent-file-area" style="display:flex;">
 				<div id="clone">
 					<div class="file-area">
 						<img src="" class="js-preview" width="200px";><br>

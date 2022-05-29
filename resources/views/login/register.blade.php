@@ -64,7 +64,7 @@
                     
                     <div class="">
                         <div class="">
-                            <button type="submit" class="btn btn-dark user-infomation-button">
+                            <button type="submit" class="btn btn-dark ">
                                 {{ __('登録') }}
                             </button>
                         </div>

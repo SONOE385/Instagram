@@ -5,21 +5,33 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Image;
 use App\Models\Tweet;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Pagination\Paginator;
 use Carbon\Carbon;
 
 class ImageListController extends Controller
 {
-   //アップロードした画像を取得して一覧で表示
-    // function show(){
-    //     $uploads = Image::orderBy('id','desc')->get();
+    // /**
+    //  * 一覧表示用のメソッド
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function index()
+    // {
+    //     $auth = Auth::user();
+    //     $auth_id = Auth::id();
 
-    //     return view('image_list',[
-    //         'image'=>$uploads
-    //     ]);
+    //     $dinners = Dinner::where('user_id', '=', $auth_id)->orderBy('created_at', 'desc')->get();
+    //     // // ユーザーごとのグループデータを表示
+    //     foreach($dinners as $dinner){
+    //         if ($auth_id !== $dinner->user_id) {
+    //             return redirect()->route('login')->with('error', '許可されていない操作です');
+    //         };
+    //     };
+
+    //     return view("dinner", ['dinners' => $dinners]);
     // }
-
 
      /**
      * 一覧表示用のメソッド
@@ -28,9 +40,14 @@ class ImageListController extends Controller
      */
     public function show(Request $request)
     {
-        $auth = Auth::user();
-        $auth_id = Auth::id();
+        // $auth = Auth::user();
+        // $auth_id = Auth::id();
+        
+        // $auth = User::user();
+        // $auth_id = User::id();
 
+        // var_dump($auth_id);
+        // exit;
 
         // ユーザーごとの投稿を表示
         $sort = $request->sort;

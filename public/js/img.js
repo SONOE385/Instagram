@@ -52,3 +52,4 @@ addBtn.click(() => {
     //CloneをParentFileAreaの直下に作る
     ParentFileArea.append(Clone).trigger('create');
 });
+
