@@ -13,7 +13,7 @@
                     </div>                        
                         <div class="row mb-3">                        
                             <div class="">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="email" autocomplete="email">
                                 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -25,7 +25,7 @@
                         
                         <div class="row mb-3">                        
                             <div class="">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="password" autocomplete="new-password">
                                 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">

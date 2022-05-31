@@ -17,10 +17,6 @@ class UploadImageController extends Controller
     //画像とツイートを投稿してDBに保存
     function upload(Request $request){
         $tweet = $request->body;
-        //  複数選択設定ができたらつける
-        // $request->validate([
-        //     'image' => 'required|file|image|mimes:png,jpg'
-        // ]);
         
         $upload_image = [];
 
@@ -43,7 +39,6 @@ class UploadImageController extends Controller
         if($path){
             foreach ($path as $val) {
                 Image::create([
-                    // 'file_name' => $upload_image->getClientOriginalName(),
                     'file_path' => $val,
                     'tweet_id' => $tweet_id
                 ]);

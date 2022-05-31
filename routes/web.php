@@ -26,11 +26,12 @@ use Illuminate\Support\Facades\Route;
     Route::post('/register-user',[App\Http\Controllers\Login\RegisterController::class, "registerUser"])->name("register-user");
 
 
-//投稿一覧
-// Route::get('/list',[App\Http\Controllers\ImageListController::class, "show"])->name("image_list");
-
 
 Route::middleware('simple_auth')->group(function(){
+    
+    //個人の投稿一覧
+    Route::get('/user_image_list',[App\Http\Controllers\ImageListController::class, "user_show"])->name("user_image_list");
+
     //投稿一覧画面(ミドルウェアつき)
     Route::get('/list', [App\Http\Controllers\ImageListController::class, "show"])->name("image_list");
     

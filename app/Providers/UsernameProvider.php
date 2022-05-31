@@ -28,7 +28,8 @@ class UsernameProvider extends ServiceProvider
         //Http\Composers\UserNameComposerを読み込み、header.blade.phpを読み込む
         
         View::composer(
-            'layouts.header', 'App\Http\Composers\UserNameComposer'
+            'layouts.header','App\Http\Composers\UserNameComposer',
+            // 'image_view','App\Http\Composers\UserNameComposer',
         );
     }
 }

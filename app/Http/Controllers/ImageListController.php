@@ -12,48 +12,38 @@ use Carbon\Carbon;
 
 class ImageListController extends Controller
 {
-    // /**
-    //  * 一覧表示用のメソッド
-    //  *
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function index()
-    // {
-    //     $auth = Auth::user();
-    //     $auth_id = Auth::id();
-
-    //     $dinners = Dinner::where('user_id', '=', $auth_id)->orderBy('created_at', 'desc')->get();
-    //     // // ユーザーごとのグループデータを表示
-    //     foreach($dinners as $dinner){
-    //         if ($auth_id !== $dinner->user_id) {
-    //             return redirect()->route('login')->with('error', '許可されていない操作です');
-    //         };
-    //     };
-
-    //     return view("dinner", ['dinners' => $dinners]);
-    // }
-
-     /**
+/**
      * 一覧表示用のメソッド
      *
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request)
     {
-        // $auth = Auth::user();
-        // $auth_id = Auth::id();
-        
-        // $auth = User::user();
-        // $auth_id = User::id();
-
-        // var_dump($auth_id);
-        // exit;
-
-        // ユーザーごとの投稿を表示
         $sort = $request->sort;
         $image = Image::orderBy('id','desc')->paginate(9);
 
         return view("image_list", ['images' => $image, 'sort' => $sort]);
+    }
+
+
+     /**
+     * 個人表示用のメソッド
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function user_show(Request $request)
+    {
+        // ユーザーごとの投稿を表示
+        $sort = $request->sort;
+        $image = Image::where("user_id",session("id"))//まずuser_idとセッションの紐づけ
+
+
+                ->leftJoin("tweets","tweets.id","images.tweet_id")//tweetsテーブルを指定,tweetsのidを指定,imagesテーブルのtweet_idをジョイン
+                ->orderBy('images.id','desc')
+                ->paginate(9);
+        // $image = User::where('id', '=', $tweet_id '=' $a)->orderBy('id', 'desc')->paginate(9);
+
+        return view("user_image_list", ['images' => $image, 'sort' => $sort]);
     }
 
 
