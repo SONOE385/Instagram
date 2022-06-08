@@ -22,8 +22,7 @@
                 <div class="user-area">
                     <form method="post" action="{{ url('logout') }}">
                         @csrf 
-                        <input type="submit" class="user-infomation-button" value="{{ $user_name }}さん" />
-                        {{-- {{ session() ==  ? '' : null }}>{{ $group->name }} --}}
+                        <input type="submit" class="user-infomation-button" value="{{ $user_name }}さん"/>
                     </form>
                     <a  href="{{ route('user_image_list') }}">
                         <img src="/images/icon.jpg" width="25%" style="border-radius: 50%;" />

@@ -44,7 +44,7 @@ class UploadImageController extends Controller
                 ]);
             }
         }
-
+        \Session::flash('msg_success', '投稿が完了しました');
         return redirect('/list');
     }
 }

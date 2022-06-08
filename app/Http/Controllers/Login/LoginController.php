@@ -52,6 +52,7 @@ class LoginController extends Controller
             // フラッシュ
             session()->put("simple_auth", true);
 
+            session()->flash('msg_success', 'ログインしました');
             return redirect(url('/list'));
 
         // 不一致 

@@ -53,3 +53,13 @@ addBtn.click(() => {
     ParentFileArea.append(Clone).trigger('create');
 });
 
+//フラッシュメッセージ
+(function() {
+    'use strict';
+
+    // フラッシュメッセージのfadeout
+    $(function(){
+        $('.flash_message').fadeOut(3000);
+    });
+
+})();
