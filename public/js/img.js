@@ -34,24 +34,38 @@ $(function () {
 //onload=ページや画像などのリソース類を読み込んでから処理を実行したいときに利用
 const addBtn = $("#add-file");
 
-addBtn.click(() => {
+addBtn.click(()=>{
+
     const ParentFileArea = $("#parent-file-area");
     //親要素のcloneの中から子要素のfile-areaを見つけてそれをクローンする＝Cloneに格納
-    const Clone = $("#clone").find(".file-area").clone();
 
-    //imgタグの中身を空にする
-    Clone.find("img").attr('src', null);
+        const Clone = $("#clone").find(".file-area").clone();
+        
+        const l = $(".file-area").length;
+        if(l<=2){
+            
+            //imgタグの中身を空にする
+            Clone.find("img").attr('src', null);
 
-    //inputにファイルが入ったままコピーされるので、いったん消す
-    Clone.find("input").remove();
+            //inputにファイルが入ったままコピーされるので、いったん消す
+            Clone.find("input").remove();
 
-    //新しくinput要素を作ってCloneに追加する("の前に\を配置しないといけない)
-    const d =  "<input type=\"file\" name=\"image[]\" class=\"js-img\" accept=\"image/png, image/jpeg\">";
-    Clone.find(".filelabel").append(d);
+            //新しくinput要素を作ってCloneに追加する("の前に\を配置しないといけない)
+            const d =  "<input type=\"file\" name=\"image[]\" class=\"js-img\" accept=\"image/png, image/jpeg\">";
+            Clone.find(".filelabel").append(d);
 
-    //CloneをParentFileAreaの直下に作る
-    ParentFileArea.append(Clone).trigger('create');
-});
+            //CloneをParentFileAreaの直下に作る
+            ParentFileArea.append(Clone).trigger('create');
+
+            //4個以上のとき
+            // if(l>=3){
+            //     window.alert('投稿できる写真は3枚までです');
+            // }
+        }
+    }
+)
+
+
 
 //フラッシュメッセージ
 (function() {

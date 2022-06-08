@@ -29,7 +29,7 @@
 		</div>
 		<button type="button" id="add-file">追加</button>
 
-		<div class="form-group">   
+		<div class="form-group">
 			<textarea class="form-control" placeholder="投稿コメント" rows="5" name="body"></textarea>
 		</div>
 		
