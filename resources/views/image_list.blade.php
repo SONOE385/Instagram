@@ -11,6 +11,12 @@
                     });
                 @endif
 
+                @if (session('err_msg'))
+                    $(function () {
+                            toastr.success('{{ session('err_msg') }}');
+                    });
+                @endif
+
                 // {{--失敗時--}}
                 @if (session('msg_danger'))
                     $(function () {

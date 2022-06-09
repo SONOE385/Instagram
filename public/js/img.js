@@ -57,12 +57,12 @@ addBtn.click(()=>{
             //CloneをParentFileAreaの直下に作る
             ParentFileArea.append(Clone).trigger('create');
 
-            //4個以上のとき
-            // if(l>=3){
-            //     window.alert('投稿できる写真は3枚までです');
-            // }
+            //4個以上のとき(if(l>=3))
+        }else{
+                alert('投稿できる写真は3枚までです');
+            }
         }
-    }
+    
 )
 
 

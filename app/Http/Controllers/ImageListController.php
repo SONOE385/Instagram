@@ -88,7 +88,7 @@ class ImageListController extends Controller
     }
 
     /**
-     * ブログを更新する
+     * 投稿を更新する
      * @return view
      */
     public function exeUpdate(Request $request)
@@ -131,17 +131,17 @@ class ImageListController extends Controller
     {
         if(empty($id)){
             \Session::flash('err_msg','データがありません。');
-            return redirect(route('blogs'));
+            return redirect(url('/list'));
         
         }
         try{
             //ブログ削除
-            Blog::destroy($id);//該当idのブログの中身を引っ張てこれる
+            Image::destroy($id);//該当idの中身を引っ張てこれる
         }catch(\Throwable $e){
             abort(500);
         }
             \Session::flash('err_msg','削除しました。');
-            return redirect(route('blogs'));
+            return redirect(url('/list'));
         
     }
 

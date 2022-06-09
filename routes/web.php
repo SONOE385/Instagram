@@ -46,5 +46,10 @@ Route::middleware('simple_auth')->group(function(){
 
     //投稿詳細
     Route::get('/list/{id}',[App\Http\Controllers\ImageListController::class, "view"])->name("image_view");
+    
+    //投稿削除
+    Route::get('/img_del/{id}', [App\Http\Controllers\ImageListController::class, 'exeDelete'])->name('img_destroy');
+
+    
 });
 

@@ -171,7 +171,8 @@
     overflow-wrap:  break-word;
 }
 
-.cereated-at{
+.created-at{
+    display: flex;
     text-align: right;
 }
 
@@ -248,4 +249,13 @@ button{
 
 #add-file{
     margin-top: 30px;
+}
+
+.tweet-body .delete{
+    width: 15px;
+    margin-left: 5px;
+}
+
+.tweet-body .delete img{
+    width: 100%;
 }
