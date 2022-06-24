@@ -18,14 +18,14 @@
  
 # Features
  
-"hoge"のセールスポイントや差別化などを説明する
- 
+*　ユーザー登録制
+*　写真投稿（複数枚）
+*　つぶやき投稿
+*　削除
+
 # Requirement
  
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
+* laravel9
  
 # Installation
  
@@ -37,25 +37,18 @@ pip install huga_package
  
 # Usage
  
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
- 
+会員登録後、投稿ができるようになります。
+
+
 # Note
  
-注意点などがあれば書く
+【email】:taro@techis.jp
+【pass】:tarou
  
 # Author
  
-作成情報を列挙する
- 
-* 作成者
-* 所属
-* E-mail
+* 赤堀　苑絵
+* sonoalamode@gmail.com
  
 # License
 ライセンスを明示する
