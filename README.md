@@ -9,52 +9,44 @@
 
 # Instagram
 
-写真投稿と同時につぶやきができるサイトです。
+写真投稿と同時につぶやきができる、Instagram風サイトです。
 
 
-# DEMO
- 
+## DEMO
+ [Webサイトで見る](herokuのURLをそのままペースト)
 ![instagram](https://user-images.githubusercontent.com/95341532/175486060-c25c3db2-0d67-45d7-9592-82d92e5c0b0a.png)
  
-# Features
+## サービス内容
  
-*　ユーザー登録制
-*　写真投稿（複数枚）
-*　つぶやき投稿
-*　削除
+* ユーザー登録制
+* 写真投稿（複数枚）
+* つぶやき投稿
+* 削除
 
-# Requirement
- 
+
+## 利用している技術
+
+* HTML
+* CSS
+* PHP
+* JavaScript
 * laravel9
  
-# Installation
+
+## インストール方法
  
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
+そのままを
+ブラウザで開くと閲覧できます。
+【email】:taro@techis.jp
+【pass】:tarou
  
 # Usage
  
 会員登録後、投稿ができるようになります。
 
-
-# Note
- 
-【email】:taro@techis.jp
-【pass】:tarou
  
 # Author
  
 * 赤堀　苑絵
 * sonoalamode@gmail.com
  
-# License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
