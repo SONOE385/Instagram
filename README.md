@@ -12,7 +12,7 @@
 写真投稿と同時につぶやきができる、Instagram風サイトです。
 
 
-## DEMO
+## デモ
  [Webサイトで見る](herokuのURLをそのままペースト)
 ![instagram](https://user-images.githubusercontent.com/95341532/175486060-c25c3db2-0d67-45d7-9592-82d92e5c0b0a.png)
  
@@ -38,15 +38,6 @@
 そのまま、image_list.blade.phpをブラウザで開き、
 ログイン画面で下記を使用すると閲覧できます。  
 【email】taro@techis.jp
-【pass】tarou
- 
-# Usage
- 
-会員登録後、投稿ができるようになります。
-
- 
-# Author
- 
-* 赤堀　苑絵
-* sonoalamode@gmail.com
- 
+【pass】tarou  
+  
+  
