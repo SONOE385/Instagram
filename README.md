@@ -36,7 +36,7 @@
 ## インストール方法
  
 そのまま、image_list.blade.phpをブラウザで開き、
-ログイン画面で下記を使用すると閲覧できます。
+ログイン画面で下記を使用すると閲覧できます。  
 【email】taro@techis.jp
 【pass】tarou
  
