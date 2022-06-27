@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+    if (config('app.env') === 'production') {
+        URL::forceScheme('https');
+    }
+
 
     //ログイン画面
     Route::get('/',[App\Http\Controllers\Login\LoginController::class, "showlogin"])->name("showlogin");
