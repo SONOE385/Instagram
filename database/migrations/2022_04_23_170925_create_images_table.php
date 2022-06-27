@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string("file_name");
             $table->string("file_path");
-            $table->string("tweet_id");
+            $table->integer("tweet_id");
         });
     }
 
