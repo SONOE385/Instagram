@@ -26,5 +26,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Paginator::useBootstrap();
+        
+        //heroku設定時に追加
+        Schema::defaultStringLength(191);
     }
 }

@@ -117,8 +117,8 @@ class ImageListController extends Controller
             abort(500);
         }
 
-        \Session::flash('err_msg','ブログを更新しました。');
-        return redirect(route('blogs'));
+        \Session::flash('err_msg','投稿を更新しました。');
+        return redirect(url('/list'));
     }
 
 
@@ -135,7 +135,7 @@ class ImageListController extends Controller
         
         }
         try{
-            //ブログ削除
+            //削除
             Image::destroy($id);//該当idの中身を引っ張てこれる
         }catch(\Throwable $e){
             abort(500);
