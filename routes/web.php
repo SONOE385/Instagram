@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+    //httpsのCSSを読み込ませるために記述
     if (config('app.env') === 'production') {
         URL::forceScheme('https');
     }
