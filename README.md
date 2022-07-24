@@ -13,7 +13,7 @@
 
 
 ## デモ
- [Webサイトで見る](herokuのURLをそのままペースト)
+ [Webサイトで見る](https://jp-instagram-clone.herokuapp.com/)
 ![instagram](https://user-images.githubusercontent.com/95341532/175486060-c25c3db2-0d67-45d7-9592-82d92e5c0b0a.png)
  
 ## サービス内容
